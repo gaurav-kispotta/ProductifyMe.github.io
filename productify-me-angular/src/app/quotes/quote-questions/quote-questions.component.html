@@ -1,0 +1,15 @@
+<div class="quote-qustion-card">
+    <div class="d-flex justify-content-between">
+        <label for="customRange2">Select list of CPUs ?</label>
+        <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-primary" (click)="decrementValue()" [disabled]="!validateMinButton()"><fa-icon [icon]="decrementIcon"></fa-icon></button>
+            <input type="text" class="form-control amount-count-input" [(value)]="countValue">
+            <button type="button" class="btn btn-primary" (click)="incrementValue()" [disabled]="!validateMaxButton()"><fa-icon [icon]="incrementIcon"></fa-icon></button>
+        </div>
+    </div>
+    <div class="row slider-input">
+        <div class="col">
+            <input type="range" #sliderRef class="custom-range" [min]="minCount" [max]="maxCount" [(value)]="countValue" (change)="onSliderChange(sliderRef.value)">
+        </div>
+    </div>
+</div>

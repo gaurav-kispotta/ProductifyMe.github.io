@@ -1,0 +1,61 @@
+.app-logo {
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+}
+
+.app-title {
+    float: inline-end;
+  color: white;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 70px;
+}
+
+.app-header {
+    padding: 5px;
+    background:  #1b1b1b;
+}
+
+.app-bulitin {
+    color: white;
+    background-image: url("860x394.jpg");
+    background-repeat: no-repeat, repeat;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    text-align: left;
+
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top:-6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
+.quote-properties {
+    background-color: violet;
+}
+
+.digital-cart {
+    background-color: teal;
+}
+
+.quote-maker {
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
