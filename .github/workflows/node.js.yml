@@ -10,13 +10,15 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-prductify-me-dev:
 
     runs-on: ubuntu-latest
+    env:
+      wrkdir: ./productify-me-angular
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -24,8 +26,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: ls
-    - run: cd productify-me-angular
     - run: npm ci
+      working-directory: ${{ env.wrkdir }}
     - run: npm run build --if-present
+      working-directory: ${{ env.wrkdir }}
     - run: npm test
+      working-directory: ${{ env.wrkdir }}
