@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "npm run build --prod",
-    "heroku:generate:token": "heroku authorizations:create"
+    "heroku:generate:token": "heroku authorizations:create",
+    "heroku:log": "heroku logs --tail -a productify-me"
   },
   "private": true,
   "dependencies": {

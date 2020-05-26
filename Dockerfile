@@ -19,13 +19,11 @@ RUN npm run heroku-postbuild
 
 FROM node:10-slim AS PROD
 
-WORKDIR /app
-
-COPY --from=BUILDER ./app ./app
+COPY --from=BUILDER ./app .
 
 ENV HOST=0.0.0.0 PORT=4200
 
 EXPOSE ${PORT}
 
 # start app
-CMD node ./server.js
+CMD node server.js
