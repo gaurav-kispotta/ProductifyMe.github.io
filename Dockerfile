@@ -1,5 +1,5 @@
 # base image
-FROM node:10-slim
+FROM node:10-slim AS BUILDER
 
 # set working directory
 WORKDIR /app
@@ -15,9 +15,17 @@ RUN npm install -g @angular/cli
 # add app
 COPY . /app
 
-ENV HOST=0.0.0.0 PORT=4200 NODE_DEBUG_PORT=9229
+RUN npm run heroku-postbuild
 
-EXPOSE ${PORT} ${NODE_DEBUG_PORT}
+FROM node:10-slim AS PROD
+
+WORKDIR /app
+
+COPY --from=BUILDER ./app ./app
+
+ENV HOST=0.0.0.0 PORT=4200
+
+EXPOSE ${PORT}
 
 # start app
-CMD ng serve --host 0.0.0.0
+CMD node ./server.js
