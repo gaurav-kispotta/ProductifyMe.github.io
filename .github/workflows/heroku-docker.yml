@@ -10,10 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: docker/build-push-action@v1
-        with:
-          registry: registry.heroku.com
-          username: _
-          password: ${{secrets.HEROKO_API_TOKEN}}
-          repository: registry.heroku.com/productify-me/web
-          tags: latest
+      - name: Login to Heroku Container registry
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKO_API_TOKEN }}
+        run: heroku container:login 
+      - name: Build and push
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKO_API_TOKEN }}
+        run: heroku container:push -a productify-me web 
+      - name: Release
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKO_API_TOKEN }}
+        run: heroku container:release -a productify-me web 
+
+      
