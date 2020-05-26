@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
-![Build to Heroku Docker image.](https://github.com/gaurav-kispotta/ProductifyMe.github.io/workflows/Build%20to%20Heroku%20Docker%20image./badge.svg)
+![Build to Heroku Docker image.](https://github.com/gaurav-kispotta/ProductifyMe.github.io/workflows/Build%20to%20Heroku%20Docker%20image./badge.svg) ![Node.js CI](https://github.com/gaurav-kispotta/ProductifyMe.github.io/workflows/Node.js%20CI/badge.svg)
 
 ## Development server
 
