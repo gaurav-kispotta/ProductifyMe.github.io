@@ -1,6 +1,6 @@
 <div class="quote-qustion-card">
     <div class="d-flex justify-content-between">
-        <label for="customRange2">Select list of CPUs ?</label>
+        <label for="customRange2">{{questionTitle}}</label>
         <div class="d-flex justify-content-between">
             <button type="button" class="btn btn-primary" (click)="decrementValue()" [disabled]="!validateMinButton()"><fa-icon [icon]="decrementIcon"></fa-icon></button>
             <input type="text" class="form-control amount-count-input" [(value)]="countValue">
