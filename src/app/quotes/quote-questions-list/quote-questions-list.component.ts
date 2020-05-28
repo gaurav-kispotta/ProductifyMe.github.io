@@ -13,27 +13,27 @@ export class QuoteQuestionsListComponent implements OnInit {
   constructor() {
 
     const q = new QuoteQuestions();
-    q.questionTitle = 'Asset Life ?';
-    q.minCount = 0;
-    q.maxCount = 10;
+    q.questionTitle = 'Asset Life?(In Months)';
+    q.minCount = 36;
+    q.maxCount = 96;
     q.value = 0;
 
     const q1 = new QuoteQuestions();
-    q1.questionTitle = 'Initial Capacity Requirement ?';
+    q1.questionTitle = 'Initial Capacity Requirement ?(In TiB)';
     q1.minCount = 0;
-    q1.maxCount = 10;
+    q1.maxCount = 25600;
     q1.value = 0;
 
     const q2 = new QuoteQuestions();
-    q2.questionTitle = 'Annual Growth ?';
-    q2.minCount = 0;
-    q2.maxCount = 10;
+    q2.questionTitle = 'Annual Growth ?(In Percentage)';
+    q2.minCount = 1;
+    q2.maxCount = 100;
     q2.value = 0;
 
     const q3 = new QuoteQuestions();
-    q3.questionTitle = 'Migration Period ?';
+    q3.questionTitle = 'Migration Period ?(In Months)';
     q3.minCount = 0;
-    q3.maxCount = 10;
+    q3.maxCount = 24;
     q3.value = 0;
 
 
