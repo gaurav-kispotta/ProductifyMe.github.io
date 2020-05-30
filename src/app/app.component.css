@@ -3,3 +3,8 @@
     color: rgb(10, 121, 196);
     font-weight: bold;
 }
+
+.router-outlet-style {
+    padding: 30px;
+
+}

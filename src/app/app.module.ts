@@ -11,13 +11,21 @@ import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { QuoteQuestionsService } from './quotes/quote-questions.service';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { HomeViewComponent } from './view/home-view/home-view.component';
+import { ComputeViewComponent } from './view/services/compute-view/compute-view.component';
+import { StorageViewComponent } from './view/services/storage-view/storage-view.component';
+import { BackupViewComponent } from './view/services/backup-view/backup-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteQuestionsComponent,
     QuoteQuestionsListComponent,
-    QuoteCartComponent
+    QuoteCartComponent,
+    HomeViewComponent,
+    ComputeViewComponent,
+    StorageViewComponent,
+    BackupViewComponent
   ],
   imports: [
     BrowserModule,

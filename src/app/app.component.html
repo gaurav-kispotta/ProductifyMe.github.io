@@ -26,21 +26,14 @@
           Services
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Compute</a>
-          <a class="dropdown-item" href="#">Storage</a>
-          <a class="dropdown-item" href="#">Back Up</a>
+          <a class="dropdown-item" href="/service/compute">Compute</a>
+          <a class="dropdown-item" href="/service/storage">Storage</a>
+          <a class="dropdown-item" href="/service/backup">Back Up</a>
         </div>
       </li>
     </ul>
   </div>
 </nav>
-<main class="container">
-  <div class="row">
-    <div class="col-md-9 quote-questions-list">
-      <app-quote-questions-list></app-quote-questions-list>
-    </div>
-    <div class="col-md-3 quote-card">
-      <app-quote-cart></app-quote-cart>
-    </div>
-  </div>
+<main class="container router-outlet-style">
+  <router-outlet></router-outlet>
 </main>
