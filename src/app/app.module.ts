@@ -8,6 +8,7 @@ import { QuoteQuestionsListComponent } from './quotes/quote-questions-list/quote
 import { QuoteCartComponent } from './quotes/quote-cart/quote-cart.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { QuoteQuestionsService } from './quotes/quote-questions.service';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +24,9 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
     AppRoutingModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    QuoteQuestionsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
