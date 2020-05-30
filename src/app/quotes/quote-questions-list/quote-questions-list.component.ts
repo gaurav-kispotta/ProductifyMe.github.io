@@ -42,6 +42,7 @@ export class QuoteQuestionsListComponent implements OnInit {
     q4.questionTitle = 'Initial Commit ?(In percentage)';
     q4.minCount = 0;
     q4.maxCount = 70;
+    q4.formatValueFunction = (v) => `${v}%`;
 
     this.quoteQuestionsService.addQestion(q);
     this.quoteQuestionsService.addQestion(q1);
