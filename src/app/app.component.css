@@ -3,3 +3,8 @@
     color: rgb(10, 121, 196);
     font-weight: bold;
 }
+
+.navbar-nav{
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+}
