@@ -38,10 +38,17 @@ export class QuoteQuestionsListComponent implements OnInit {
     q3.minCount = 0;
     q3.maxCount = 24;
 
+    const q4 = new QuoteQuestions();
+    q4.questionTitle = 'Initial Commit ?(In percentage)';
+    q4.minCount = 0;
+    q4.maxCount = 70;
+    q4.formatValueFunction = (v) => `${v}%`;
+
     this.quoteQuestionsService.addQestion(q);
     this.quoteQuestionsService.addQestion(q1);
     this.quoteQuestionsService.addQestion(q2);
     this.quoteQuestionsService.addQestion(q3);
+    this.quoteQuestionsService.addQestion(q4);
    }
 
   ngOnInit() {

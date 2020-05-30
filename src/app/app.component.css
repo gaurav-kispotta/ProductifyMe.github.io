@@ -6,5 +6,9 @@
 
 .router-outlet-style {
     padding: 30px;
+}
 
+.navbar-nav{
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
 }
