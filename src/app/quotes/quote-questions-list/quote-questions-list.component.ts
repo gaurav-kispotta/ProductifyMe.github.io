@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteQuestions } from 'src/app/models/quote-questions.model';
 import { QuoteQuestionsService } from 'src/app/quotes/quote-questions.service';
+import { format } from 'bytes';
+import { months } from 'moment';
 
 @Component({
   selector: 'app-quote-questions-list',
@@ -17,25 +19,24 @@ export class QuoteQuestionsListComponent implements OnInit {
     q.questionTitle = 'Asset Life?(In Months)';
     q.minCount = 36;
     q.maxCount = 96;
-    q.value = 0;
+    // q.formatValueFunction = (v) => months(v);
+
 
     const q1 = new QuoteQuestions();
     q1.questionTitle = 'Initial Capacity Requirement ?(In TiB)';
     q1.minCount = 0;
     q1.maxCount = 25600;
-    q1.value = 0;
 
     const q2 = new QuoteQuestions();
     q2.questionTitle = 'Annual Growth ?(In Percentage)';
     q2.minCount = 1;
     q2.maxCount = 100;
-    q2.value = 0;
+    q2.formatValueFunction = (v) => `${v}%`;
 
     const q3 = new QuoteQuestions();
     q3.questionTitle = 'Migration Period ?(In Months)';
     q3.minCount = 0;
     q3.maxCount = 24;
-    q3.value = 0;
 
     this.quoteQuestionsService.addQestion(q);
     this.quoteQuestionsService.addQestion(q1);

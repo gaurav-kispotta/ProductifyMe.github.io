@@ -10,6 +10,10 @@ export class QuoteQuestionsService {
 
   constructor() { }
 
+  getQuestion(index: number) {
+    return this.quoteQuestionList[index];
+  }
+
   getQuestions(): Array<QuoteQuestions> {
     return this.quoteQuestionList;
   }
@@ -25,5 +29,4 @@ export class QuoteQuestionsService {
   updateValues(index: number, value: number) {
     this.quoteQuestionList[index].value = value;
   }
-
 }

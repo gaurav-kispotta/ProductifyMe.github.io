@@ -3,4 +3,9 @@ export class QuoteQuestions {
     public minCount: number;
     public maxCount: number;
     public value: number;
+    public formatValueFunction: (v: number) => string;
+
+    constructor() {
+        this.value = this.minCount;
+    }
 }
