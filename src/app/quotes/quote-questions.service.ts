@@ -18,6 +18,10 @@ export class QuoteQuestionsService {
 
   constructor() { }
 
+  getQuestionCount() {
+    return this.quoteQuestionList.length;
+  }
+
   getQuestion(index: number) {
     return this.quoteQuestionList[index];
   }

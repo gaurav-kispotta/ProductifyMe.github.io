@@ -44,11 +44,13 @@ export class QuoteQuestionsListComponent implements OnInit {
     q4.maxCount = 70;
     q4.formatValueFunction = (v) => `${v}%`;
 
-    this.quoteQuestionsService.addQestion(q);
-    this.quoteQuestionsService.addQestion(q1);
-    this.quoteQuestionsService.addQestion(q2);
-    this.quoteQuestionsService.addQestion(q3);
-    this.quoteQuestionsService.addQestion(q4);
+    if (this.quoteQuestionsService.getQuestionCount() === 0) {
+      this.quoteQuestionsService.addQestion(q);
+      this.quoteQuestionsService.addQestion(q1);
+      this.quoteQuestionsService.addQestion(q2);
+      this.quoteQuestionsService.addQestion(q3);
+      this.quoteQuestionsService.addQestion(q4);
+    }
    }
 
   ngOnInit() {
