@@ -1,11 +1,7 @@
-.card {
-    font-size: 14px;
+.card quote-card{
+    background-color: lightskyblue;
 }
 
 .select-options {
-    width: 22%;
-}
-
-.form-group {
-    font-weight: bold;
+    width: 20%;
 }
