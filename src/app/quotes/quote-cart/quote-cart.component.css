@@ -13,3 +13,7 @@
     font-size: 15px;
     font-variant-caps: petite-caps;
 }
+
+.cart-value {
+    font-weight: bold;
+}

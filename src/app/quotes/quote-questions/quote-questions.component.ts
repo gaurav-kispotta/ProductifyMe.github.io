@@ -17,7 +17,7 @@ export class QuoteQuestionsComponent implements OnInit {
   public minCount = 0;
   public maxCount = 10;
 
-  public value = new EventEmitter<number>();
+  @Output() public value = new EventEmitter<number>();
 
   public questionTitle: string;
   @Input() public collectionIndex: number;
@@ -49,6 +49,8 @@ export class QuoteQuestionsComponent implements OnInit {
 
   onSliderChange(value: number) {
     this.countValue = value;
+    this.quoteQuestionsService.updateValues(this.collectionIndex, value);
+    this.quoteQuestionsService.cartUpdatedEvent();
   }
 
   validateMinButton() {

@@ -54,11 +54,27 @@ export class QuoteQuestionsListComponent implements OnInit {
   ngOnInit() {
   }
 
-  onValueChaned(changedValue: number, index: number) {
-    this.quoteQuestionsService.updateValues(index, changedValue);
-  }
+  // onValueChaned(changedValue: number, index: number) {
+  //   this.quoteQuestionsService.updateValues(index, changedValue);
+  // }
 
   public getQuestionsList() {
     return this.quoteQuestionsService.getQuestions();
+  }
+
+  onRegionChange(value: string) {
+    this.quoteQuestionsService.updateRegion(value);
+  }
+
+  onCountryChange(value: string) {
+    this.quoteQuestionsService.updateCountry(value);
+  }
+
+  onTypeChange(value: string) {
+    this.quoteQuestionsService.updateType(value);
+  }
+
+  onPerformanceChange(value: string) {
+    this.quoteQuestionsService.updatePerformance(value);
   }
 }

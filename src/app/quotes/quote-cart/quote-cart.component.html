@@ -1,5 +1,54 @@
 <div class="card cart-style">
-    <h3>Estimated TCV: </h3>
+    <h3>Estimated TVC:</h3>
+    <h6>Selected services:</h6>
+    <div class="row" *ngIf="assetLife">
+        <div class="col">
+            Asset Life:
+        </div>
+        <div class="col">
+            <span class="cart-value">{{assetLife}} months</span>
+        </div>
+    </div>
+    <div class="row" *ngIf="initialCapacity">
+        <div class="col">
+            Initial Capacity Requirement:
+        </div>
+        <div class="col">
+            <span class="cart-value">{{initialCapacity}} TiB</span>
+        </div>
+    </div>
+    <div class="row" *ngIf="anualGrowth">
+        <div class="col">
+            Anual Growth:
+        </div>
+        <div class="col">
+            <span class="cart-value">{{anualGrowth}} months</span>
+        </div>
+    </div>
+    <div class="row" *ngIf="migrationPeriod">
+        <div class="col">
+            Migration Period:
+        </div>
+        <div class="col">
+            <span class="cart-value">{{migrationPeriod}} months</span>
+        </div>
+    </div>
+    <div class="row" *ngIf="initalCommit">
+        <div class="col">
+            Initial Commit:
+        </div>
+        <div class="col">
+            <span class="cart-value">{{initalCommit}}%</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <span class="estimated-tvc">Estimated TVC Value: {{ estimateTvc | number:'0.1-4' }}</span>
+        </div>
+    </div>
+    
 </div>
+
+
 
 <button id="Getme" style="margin-top: 1em;" type="button" (click)="redirectToReport()">NEXT</button>

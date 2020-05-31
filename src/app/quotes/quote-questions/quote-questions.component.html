@@ -3,7 +3,12 @@
         <label for="customRange2">{{ questionTitle }}</label>
         <div class="d-flex justify-content-between">
             <button type="button" class="btn btn-primary" (click)="decrementValue()" [disabled]="!validateMinButton()"><fa-icon [icon]="decrementIcon"></fa-icon></button>
-            <input type="text" [min]="minCount" [max]="maxCount" class="form-control amount-count-input" [value]="countValue" (keyup.enter)="inputValueChanged($event.target.value, $event.target)">
+            <input type="text" class="form-control amount-count-input"
+                [min]="minCount" 
+                [max]="maxCount" 
+                [value]="countValue" 
+                (keyup.enter)="inputValueChanged($event.target.value, $event.target)"
+                >
             <button type="button" class="btn btn-primary" (click)="incrementValue()" [disabled]="!validateMaxButton()"><fa-icon [icon]="incrementIcon"></fa-icon></button>
         </div>
     </div>

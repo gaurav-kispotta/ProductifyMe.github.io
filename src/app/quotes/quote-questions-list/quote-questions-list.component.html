@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between">
         <div class="form-group select-options">
             <label for="region">Region:</label>
-            <select class="form-control" id="region">
+            <select class="form-control" id="region" (change)="onRegionChange($event.value)">
               <option value="na">North America</option>
               <option value="sa">South America</option>
               <option value="emea">EMEA</option>
@@ -12,7 +12,7 @@
         </div>
         <div class="form-group select-options">
             <label for="country">Country:</label>
-            <select class="form-control" id="country">
+            <select class="form-control" id="country" (change)="onCountryChange($event.value)">
               <option value="usa">United States</option>
               <option value="uk">United Kingdom</option>
               <option value="in">India</option>
@@ -21,7 +21,7 @@
         </div>
         <div class="form-group select-options">
             <label for="type">Type:</label>
-            <select class="form-control" id="type">
+            <select class="form-control" id="type" (change)="onTypeChange($event.value)">
               <option value="t1">Block</option>
               <option value="t2">File</option>
               <option value="t3">Object</option>
@@ -29,7 +29,7 @@
         </div>
         <div class="form-group select-options">
             <label for="performance">Performance:</label>
-            <select class="form-control" id="performance">
+            <select class="form-control" id="performance" (change)="onPerformanceChange($event.value)">
               <option value="p1">High Performance</option>
               <option value="p2">Low Performance</option>>
             </select>
@@ -39,5 +39,5 @@
 <div class="card quote-card" *ngFor="let q of getQuestionsList(); let i = index">
     <app-quote-questions 
         [collectionIndex]="i"
-        (value)="onValueChaned($event, i)"></app-quote-questions>
+        ></app-quote-questions>
 </div>
