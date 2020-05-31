@@ -17,6 +17,8 @@ import { ComputeViewComponent } from './view/services/compute-view/compute-view.
 import { StorageViewComponent } from './view/services/storage-view/storage-view.component';
 import { BackupViewComponent } from './view/services/backup-view/backup-view.component';
 import { ReportViewComponent } from './view/services/storage-view/report-view/report-view/report-view.component';
+import { BdViewComponent } from './view/contacts/bd-view/bd-view.component';
+import { SpViewComponent } from './view/contacts/sp-view/sp-view.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ReportViewComponent } from './view/services/storage-view/report-view/re
     ComputeViewComponent,
     StorageViewComponent,
     BackupViewComponent,
-    ReportViewComponent
+    ReportViewComponent,
+    BdViewComponent,
+    SpViewComponent
   ],
   imports: [
     BrowserModule,
