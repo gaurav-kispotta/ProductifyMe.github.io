@@ -1,16 +1,16 @@
 .quote-qustion-card {
-    padding: 35px;
+    padding: 1px;
 }
 
 .amount-count-input {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
     width: 80px;
-    text-align: center;
+    text-align: justify;
 }
 
 .slider-input {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .invalid-value {
