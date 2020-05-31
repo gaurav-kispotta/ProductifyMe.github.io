@@ -32,9 +32,14 @@ export class QuoteQuestionsComponent implements OnInit {
     const q = this.quoteQuestionsService.getQuestion(this.collectionIndex);
     this.minCount = q.minCount;
     this.maxCount = q.maxCount;
-    this.countValue = q.minCount;
     this.questionTitle = q.questionTitle;
     this.formatedValue = q.formatValueFunction;
+    if (q.value > q.minCount) {
+      this.countValue = q.value;
+      this.quoteQuestionsService.cartUpdatedEvent();
+    } else {
+      this.countValue = q.minCount;
+    }
   }
 
   incrementValue() {
