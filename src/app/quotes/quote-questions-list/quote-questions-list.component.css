@@ -1,3 +1,7 @@
 .card quote-card{
     background-color: lightskyblue;
 }
+
+.select-options {
+    width: 20%;
+}

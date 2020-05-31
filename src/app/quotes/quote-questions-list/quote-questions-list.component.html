@@ -1,4 +1,42 @@
 
+<div>
+    <div class="d-flex justify-content-between">
+        <div class="form-group select-options">
+            <label for="region">Region:</label>
+            <select class="form-control" id="region">
+              <option value="na">North Ameriaca</option>
+              <option value="sa">South America</option>
+              <option value="europe">European</option>
+              <option value="mear">Middle East Asian Region</option>
+            </select>
+        </div>
+        <div class="form-group select-options">
+            <label for="country">Country:</label>
+            <select class="form-control" id="country">
+              <option value="usa">USA</option>
+              <option value="br">Brazil</option>
+            </select>
+        </div>
+        <div class="form-group select-options">
+            <label for="type">Type:</label>
+            <select class="form-control" id="type">
+              <option value="t1">Type 1</option>
+              <option value="t2">Type 2</option>
+              <option value="t3">Type 3</option>
+              <option value="t4">Type 4</option>
+            </select>
+        </div>
+        <div class="form-group select-options">
+            <label for="performance">Performance:</label>
+            <select class="form-control" id="performance">
+              <option value="p1">Performance 1</option>
+              <option value="p2">Performance 2</option>
+              <option value="p3">Performance 3</option>
+              <option value="p4">Performance 4</option>
+            </select>
+        </div>
+    </div>
+</div>
 <div class="card quote-card" *ngFor="let q of getQuestionsList(); let i = index">
     <app-quote-questions 
         [collectionIndex]="i"
