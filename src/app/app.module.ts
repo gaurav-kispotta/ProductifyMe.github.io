@@ -9,12 +9,14 @@ import { QuoteCartComponent } from './quotes/quote-cart/quote-cart.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { QuoteQuestionsService } from './quotes/quote-questions.service';
+import { ChartsModule } from 'ng2-charts';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { HomeViewComponent } from './view/home-view/home-view.component';
 import { ComputeViewComponent } from './view/services/compute-view/compute-view.component';
 import { StorageViewComponent } from './view/services/storage-view/storage-view.component';
 import { BackupViewComponent } from './view/services/backup-view/backup-view.component';
+import { ReportViewComponent } from './view/services/storage-view/report-view/report-view/report-view.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { BackupViewComponent } from './view/services/backup-view/backup-view.com
     HomeViewComponent,
     ComputeViewComponent,
     StorageViewComponent,
-    BackupViewComponent
+    BackupViewComponent,
+    ReportViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ChartsModule
   ],
   providers: [
     QuoteQuestionsService
