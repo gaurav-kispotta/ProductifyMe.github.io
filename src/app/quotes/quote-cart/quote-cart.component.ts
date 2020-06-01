@@ -15,7 +15,7 @@ export class QuoteCartComponent implements OnInit {
   public migrationPeriod: number;
   public initalCommit: number;
 
-  public estimateTvc = 0.0;
+  public estimateTcv = 0.0;
 
   constructor(private router: Router, private quoteQuestionsService: QuoteQuestionsService) { }
 
@@ -36,15 +36,15 @@ export class QuoteCartComponent implements OnInit {
     this.migrationPeriod = this.quoteQuestionsService.getQuestion(3).value;
     this.initalCommit = this.quoteQuestionsService.getQuestion(4).value;
 
-    this.estimateTvc = this.calculateTvc();
+    this.estimateTcv = this.calculateTcv();
   }
 
-  calculateTvc(): number {
-    let tvc = 0;
+  calculateTcv(): number {
+    let tcv = 0;
 
-    tvc = (this.assetLife / this.initalCommit) * 100;
+    tcv = (this.assetLife / this.initalCommit) * 100;
 
-    return tvc;
+    return tcv;
   }
 
 }

@@ -3,12 +3,19 @@
     height: 170px;
 }
 
-#bg {
-    position: fixed; 
-    top: 50%; 
-    left: 0; 
-      
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 40%;
-  }
+.jumbotron{
+    background-image: url("cloud.jpg");
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.jumbotron h2{
+    color: white;
+    position: relative;
+    
+}
+
+.jumbotron h5{
+    color: white;
+    
+}
